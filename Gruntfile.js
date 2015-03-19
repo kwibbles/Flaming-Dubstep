@@ -21,6 +21,14 @@ module.exports = function (grunt) {
         }]
       }
     },
+    copy: {
+      build: {
+        files: [{
+          src: 'node_modules/normalize.css/normalize.css',
+          dest: 'build/vendor/normalize.css'
+        }]
+      }
+    },
     'gh-pages': {
       options: {
         base: 'build'
@@ -30,10 +38,13 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-gh-pages');
 
-  grunt.registerTask('deploy', ['assemble', 'gh-pages']);
+  grunt.registerTask('build', ['assemble', 'copy']);
 
-  grunt.registerTask('default', ['assemble']);
+  grunt.registerTask('deploy', ['build', 'gh-pages']);
+
+  grunt.registerTask('default', ['build']);
 
 };
