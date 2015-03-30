@@ -2,9 +2,38 @@
 <html>
 	<head>
 		<title>Flaming Dubstep</title>
+		<link rel="stylesheet" href="/vendor/normalize.css" />
+		<link rel="stylesheet" href="/vendor/bootstrap.min.css" />
 	</head>
+
 	<body>
-		<h1>This is an about page, mo fuggas.</h1>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.hbs">Home</a></li>
+        <li><a href="about.hbs">About</a></li>
+        <li><a href="shows.hbs">Shows</a></li>
+        <li><a href="merch.hbs">Merch</a></li>
+        <li><a href="contact.hbs">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div class="container">
+    <h1>This is an about page, mo fuggas.</h1>
+    <p>Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+</div>
 		<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
 	</body>
 </html>
